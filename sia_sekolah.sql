@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2020 at 06:20 AM
+-- Generation Time: Jul 14, 2020 at 01:22 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -40,8 +40,7 @@ CREATE TABLE `t_m_akun1` (
 --
 
 INSERT INTO `t_m_akun1` (`id_akun1`, `nama_akun1`, `kode_akun1`, `kategori_akun1`) VALUES
-(1, 'Aset tetap', '1-0001', 'Harta (Aktiva)'),
-(2, 'Beban Tetap', '1-110', 'Beban/Biaya (Expense)');
+(1, 'Aset tetap', '1-0001', 'Harta (Aktiva)');
 
 -- --------------------------------------------------------
 
@@ -62,8 +61,8 @@ CREATE TABLE `t_m_akun2` (
 --
 
 INSERT INTO `t_m_akun2` (`id_akun2`, `rid_akun1`, `kode_akun2`, `nama_akun2`, `ket`) VALUES
-(18, 1, '1-0210', 'Bayar Listrik Rumah Paus', 'jvj'),
-(20, 2, '3-000', 'Dalam', 'djasldas');
+(1, 1, '2-001', 'Kas Dan Bank', 'Kas dan bank sekolah insan teladan pekanbaru'),
+(2, 1, '2-1212', 'Peralatan Sekolah', 'Peralatan belajar\r\n');
 
 -- --------------------------------------------------------
 
@@ -118,13 +117,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `t_m_akun1`
 --
 ALTER TABLE `t_m_akun1`
-  MODIFY `id_akun1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_akun1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `t_m_akun2`
 --
 ALTER TABLE `t_m_akun2`
-  MODIFY `id_akun2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_akun2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
