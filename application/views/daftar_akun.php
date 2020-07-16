@@ -182,6 +182,7 @@
         <div class="form-group">
           <label>Tipe Akun</label>
           <select name="rid_akun1" class="form-control" value="rid_akun1">
+            <option value="" selected>Pilih Tipe</option>
             <?php
             $rid_akun1 = $this->db->get('t_m_akun1');
             foreach ($rid_akun1->result() as $row) {
@@ -211,6 +212,13 @@
       formEdit.querySelector("input[name='nama_akun2']").value = this.dataset.nama_akun2;
       formEdit.querySelector("input[name='kode_akun2']").value = this.dataset.kode_akun2;
       formEdit.querySelector("input[name='ket']").value = this.dataset.ket;
+      let select = formEdit.querySelector("select[name='rid_akun1']");
+      [...select.querySelectorAll('option')].forEach(opt => {
+        opt.removeAttribute("selected");
+        if (opt.getAttribute("value") == this.dataset.rid_akun1) {
+          opt.setAttribute("selected", "selected");
+        }
+      })
     })
   })
 </script>
